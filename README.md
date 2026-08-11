@@ -18,4 +18,4 @@ https://api.themoviedb.org/3/movie/popular?api_key=7dca63a6a7c4d73a66737e20335ab
 
 10.declare an interface for MovieCardProps and declare all the variables in it
 
-11.
+11.Add an Image tag in the MovieCard component and pass props like src,alt

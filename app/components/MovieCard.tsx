@@ -1,4 +1,4 @@
-import React from 'react'
+import Image from 'next/image';
 
 
 interface MovieCardProps{
@@ -8,10 +8,14 @@ description:string;
 id:number
 }
 
-const MovieCard = ({}:MovieCardProps) => {
+const MovieCard = ({posterPath,description,id,title}:MovieCardProps) => {
   return (
     <div>
-      
+      <Image alt={title} src={posterPath} width={300} height={220}/>
+      <div>
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </div>
     </div>
   )
 }

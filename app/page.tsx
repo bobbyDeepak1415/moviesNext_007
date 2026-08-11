@@ -1,3 +1,4 @@
+import MovieCard from "./components/MovieCard";
 import styles from "./page.module.css";
 
 const api_key = process.env.API_KEY;
@@ -7,22 +8,30 @@ const getMovies = async () => {
     `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}`,
   );
   const moviesListJSON = await moviesList.json();
-  return moviesListJSON
+  return moviesListJSON;
 };
 
 export default async function Home() {
-const moviesList=await getMovies()
-console.log(moviesList)
+  const moviesList = await getMovies();
+  console.log(moviesList);
 
-
-  return(
-
+  return (
     <main className={styles.main}>
       <h1>The Movie Database</h1>
       <div>
-          
+        {moviesList.length > 0 &&
+          moviesList.map((movie) => {
+            return (
+              <MovieCard
+                key={movie.id}
+                posterPath={}
+                title={movie.title}
+                description={movie.description}
+                id={movie.id}
+              />
+            );
+          })}
       </div>
     </main>
-  )
+  );
 }
- 
