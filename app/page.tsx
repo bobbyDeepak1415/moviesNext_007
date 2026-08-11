@@ -1,5 +1,7 @@
-import MovieCard from "./components/MovieCard";
+import type { Metadata } from "next";
+
 import styles from "./page.module.css";
+import MovieCard from "./components/MovieCard";
 
 interface MovieDetails {
   adult: boolean;
@@ -18,26 +20,29 @@ interface MovieDetails {
   vote_count: number;
 }
 
-const api_key = process.env.API_KEY;
+const apiKey = process.env.API_KEY;
+
+export const metadata: Metadata = {
+  title: "Popular Movies",
+  description: "Get all popular movies here",
+};
 
 const getMovies = async () => {
   const moviesList = await fetch(
-    `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}`,
+    `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`,
   );
   const moviesListJSON = await moviesList.json();
   return moviesListJSON;
 };
 
 export default async function Home() {
-  const moviesList = await getMovies();
-  console.log(moviesList);
-
+  const movieList = await getMovies();
   return (
     <main className={styles.main}>
-      <h1>The Movie Database</h1>
-      <div>
-        {moviesList.length > 0 &&
-          moviesList.map((movie:MovieDetails) => {
+      <h1 className={styles.h1}>The Movie Database</h1>
+      <div className={styles.container}>
+        {movieList.results.length > 0 &&
+          movieList.results.map((movie: MovieDetails) => {
             return (
               <MovieCard
                 key={movie.id}

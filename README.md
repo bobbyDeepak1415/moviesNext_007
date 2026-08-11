@@ -24,4 +24,6 @@ https://api.themoviedb.org/3/movie/popular?api_key=7dca63a6a7c4d73a66737e20335ab
 
 13.if the moviesList has length then conditionally render the MovieCard component and pass props like key and posterpath.title,description and id
 
-14.declare an interface called MovieDetails and declare all the details present in the data being fetched
+14.declare an interface called MovieDetails and declare all the details present in the data being fetched and then pass it as the type for movie being rendered by mapping the MoviesList
+
+15. in the next.config pass the configuration as remotePatterns and in it protocol and hostname
