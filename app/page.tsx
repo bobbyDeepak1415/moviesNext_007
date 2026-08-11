@@ -37,7 +37,7 @@ export default async function Home() {
       <h1>The Movie Database</h1>
       <div>
         {moviesList.length > 0 &&
-          moviesList.map((movie) => {
+          moviesList.map((movie:MovieDetails) => {
             return (
               <MovieCard
                 key={movie.id}

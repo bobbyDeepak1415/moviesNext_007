@@ -14,7 +14,7 @@ https://api.themoviedb.org/3/movie/popular?api_key=7dca63a6a7c4d73a66737e20335ab
 
 8.console.log() the moviesList and check the terminal in vs code if it is working
 
-9.create a components folder and ten create  MoviesCard component
+9.create a components folder and ten create MoviesCard component
 
 10.declare an interface for MovieCardProps and declare all the variables in it
 
@@ -24,4 +24,4 @@ https://api.themoviedb.org/3/movie/popular?api_key=7dca63a6a7c4d73a66737e20335ab
 
 13.if the moviesList has length then conditionally render the MovieCard component and pass props like key and posterpath.title,description and id
 
-14.
+14.declare an interface called MovieDetails and declare all the details present in the data being fetched
