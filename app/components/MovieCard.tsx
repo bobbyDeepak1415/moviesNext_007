@@ -1,6 +1,14 @@
 import React from 'react'
 
-const MovieCard = () => {
+
+interface MovieCardProps{
+posterPath:string;
+title:string;
+description:string;
+id:number
+}
+
+const MovieCard = ({}:MovieCardProps) => {
   return (
     <div>
       
@@ -9,3 +17,4 @@ const MovieCard = () => {
 }
 
 export default MovieCard
+ 
