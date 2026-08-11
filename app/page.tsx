@@ -24,9 +24,9 @@ export default async function Home() {
             return (
               <MovieCard
                 key={movie.id}
-                posterPath={}
+                posterPath={movie.poster_path}
                 title={movie.title}
-                description={movie.description}
+                description={movie.overview}
                 id={movie.id}
               />
             );

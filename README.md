@@ -19,3 +19,9 @@ https://api.themoviedb.org/3/movie/popular?api_key=7dca63a6a7c4d73a66737e20335ab
 10.declare an interface for MovieCardProps and declare all the variables in it
 
 11.Add an Image tag in the MovieCard component and pass props like src,alt
+
+12.then add description in p tag and title in h1 tag
+
+13.if the moviesList has length then conditionally render the MovieCard component and pass props like key and posterpath.title,description and id
+
+14.
