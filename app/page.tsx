@@ -17,6 +17,12 @@ console.log(moviesList)
 
   return(
 
-    <main className={styles.main}>Hello</main>
+    <main className={styles.main}>
+      <h1>The Movie Database</h1>
+      <div>
+          x
+      </div>
+    </main>
   )
 }
+ 
