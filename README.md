@@ -11,3 +11,11 @@ https://api.themoviedb.org/3/movie/popular?api_key=7dca63a6a7c4d73a66737e20335ab
 6.pass the url into the fetch method and bind the url with the api_key
 
 7.now in the Home component call the data fetching function with a moviesList variable
+
+8.console.log() the moviesList and check the terminal in vs code if it is working
+
+9.create a components folder and ten create  MoviesCard component
+
+10.declare an interface for MovieCardProps and declare all the variables in it
+
+11.

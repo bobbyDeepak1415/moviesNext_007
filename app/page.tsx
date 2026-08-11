@@ -20,7 +20,7 @@ console.log(moviesList)
     <main className={styles.main}>
       <h1>The Movie Database</h1>
       <div>
-          x
+          
       </div>
     </main>
   )
